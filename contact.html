@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links-->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="./assets/icons/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+
+    <title>Contact Page | Alan Hassan</title>
+</head>
+<body>
+    <main>
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <a href="./index.html" class="back-link">← Back</a>
+            <form action="#">
+                <div class="form-image">
+                    <img src="./assets/images/contact.jpg" alt="Contact illustration">
+                </div>
+
+                <div class="form-fields">
+                    <div class="inp">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="inp">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="e.g. +964 770 000 0000">
+                    </div>
+
+                    <div class="inp">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="inp">
+                        <label for="choose-service">Choose a Service</label>
+                        <select id="choose-service">
+                            <option style="color: white;" value="">-- Select --</option>
+                            <option style="color: white;" value="web">Web Development</option>
+                            <option style="color: white;" value="security">Cybersecurity Analysis</option>
+                            <option style="color: white;" value="consulting">Technical Consulting</option>
+                        </select>
+                    </div>
+
+                    <div class="inp">
+                        <label for="description">Service Description</label>
+                        <textarea placeholder="Write your message..." id="description" cols="40" rows="6"></textarea>    
+                    </div>
+
+                    <button class="submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

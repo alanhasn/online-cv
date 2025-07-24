@@ -1,0 +1,228 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --accent-color: #8b5cf6;
+  --text-color: #f8fafc;
+  --border-color: #83838340;
+  --focus-shadow: #4facfe;
+  --bg-light: #ffffff;
+  --bg-dark: #0a0f24;
+}
+
+::selection{
+    color: var(--primary-color);
+    background-color: var(--bg-dark);
+}
+
+/* Global Styles */
+body {
+  font-family: "Roboto Serif", serif;
+  font-size: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  padding: 40px 20px;
+}
+
+/* Contact Container */
+.contact {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+  background-color: #1a1a2e;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Heading */
+.contact h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 2px;
+  padding-bottom: 16px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover), var(--accent-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  animation: glowPulse 1.5s infinite alternate ease-in-out;
+}
+
+.contact h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.contact h1::after {
+  content: "";
+  position: absolute;
+  background: var(--text-color);
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  left: 50%;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  transform: translateX(-50%);
+}
+
+/* Animation */
+@keyframes glowPulse {
+  from {
+    filter: brightness(0.9);
+    text-shadow: 0 0 8px var(--focus-shadow);
+  }
+  to {
+    filter: brightness(2.0);
+    text-shadow: 0 0 18px var(--accent-color);
+  }
+}
+
+/* Back Link */
+.contact .back-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: -10px;
+  width: 70px;
+}
+
+/* Form Layout */
+.contact form {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  min-height: 100%;
+}
+
+/* Image Section */
+.form-image {
+  flex: 2;
+  height: 100%;
+  max-width: 350px;
+  display: flex;
+  align-items: stretch;
+}
+
+.form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(45, 157, 255, 0.2);
+}
+
+/* Form Fields Section */
+.form-fields {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px;
+}
+
+/* Input Containers */
+.contact .inp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact .inp label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.contact .inp input,
+.contact .inp select,
+.contact .inp textarea {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  background: var(--bg-dark);
+  color: var(--text-color);
+  outline: none;
+
+}
+
+.contact .inp input::placeholder,
+.contact .inp textarea::placeholder{
+    color: white;
+}
+
+.contact .inp input:focus,
+.contact .inp select:focus,
+.contact .inp textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* Submit Button */
+.submit-btn {
+    background: transparent;
+    color: white;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    z-index: 1;
+}
+
+.submit-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    z-index: -1;
+    transition: height 0.4s ease;
+    border-radius: 8px;
+}
+
+.submit-btn:hover {
+    color: var(--bg-dark);
+    border-color: transparent;
+    box-shadow: 0 0 8px var(--primary-color), 0 0 16px var(--accent-color);
+}
+
+.submit-btn:hover::after {
+    height: 100%;
+}
+
+
+.submit-btn i {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+  transform: translateX(4px);
+}
+
