@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #3b82f6;
+    --accent-color: #8b5cf6;
+    --text-color: #f8fafc;
+    --bg-color: #0f172a;
+    --section-bg: rgba(255, 255, 255, 0.03);
+    --transition: 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 18px;
+    min-width: 90px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: var(--text-color);
+    background: transparent;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+    transition:
+    color var(--transition),
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.back-link:hover,
+.back-link:focus {
+    color: #0f172a;
+    background: linear-gradient(135deg, var(--accent-color), var(--text-color));
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 16px var(--accent-color);
+    transform: translateY(-4px) scale(1.04);
+    outline: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: var(--section-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    width: 280px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
