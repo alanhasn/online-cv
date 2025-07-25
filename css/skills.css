@@ -161,3 +161,88 @@ body {
     font-size: 1rem;
     color: #cbd5e1;
 }
+
+
+/* ================= RESPONSIVE STYLES ================= */
+
+@media (max-width: 1024px) {
+  .main-title {
+    font-size: 28px;
+    padding-bottom: 14px;
+  }
+
+  .skill-card {
+    width: 260px;
+    padding: 20px;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .back-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .badges {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .main-title::after {
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .skill-card {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-list li {
+    font-size: 0.95rem;
+  }
+}

@@ -85,6 +85,14 @@
   toggleBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
+
+  /* close the menu after click in the link*/
+  document.querySelectorAll('header nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  });
+
 </script>
 
 </body>

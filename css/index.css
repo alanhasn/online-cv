@@ -290,8 +290,6 @@ header nav ul li a:focus{
 
 
 
-/*Responsive design*/
-
 /* Hide menu-toggle by default */
 .menu-toggle {
     display: none;
@@ -309,38 +307,151 @@ header nav ul li a:focus{
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Show the menu button */
-    .menu-toggle {
-        display: block;
-    }
+    /* show the menu button*/
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+  }
 
-    header nav ul {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: var(--bg-color);
-        padding: 20px 0;
-        display: none; /* Hidden by default */
-        gap: 0;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        z-index: 9999;
-    }
+  header {
+    padding: 0 20px;
+  }
 
-    header nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px 0;
-    }
+  header img {
+    height: 40px;
+  }
 
-    header nav ul li a {
-        padding: 12px 20px;
-        display: block;
-        font-size: 1.2rem;
-    }
+  .search-box {
+    width: 160px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
 
-    header nav ul.show {
-        display: flex;
-    }
+  header nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 20px 0;
+    display: none; /*hidden by default*/
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  header nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  header nav ul li a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .home-section {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .home-section h1 {
+    font-size: 2.8rem;
+  }
+
+  .home-section .intro {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .btn {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    text-align: center;
+  }
+
+  #aboutme-section h1 {
+    font-size: 26px;
+  }
+
+  #aboutme-section p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* GENERAL RESPONSIVE SETTINGS */
+@media (max-width: 1024px) {
+  .home-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-section .intro {
+    font-size: 1.1rem;
+  }
+
+  .btn-link {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  #aboutme-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .home-section .intro {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .search-box {
+    width: 140px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  #aboutme-section h1 {
+    font-size: 22px;
+    padding-bottom: 12px;
+  }
+
+  #aboutme-section h1::after {
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+  }
+
+  #aboutme-section p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .btn-link {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+  }
 }
