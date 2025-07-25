@@ -35,6 +35,11 @@
               <li><a href="https://alanhasn.github.io/Portfolio" target="_blank"><i class="fa-solid fa-globe"></i> <span>Portfolio</span></a></li>
             </ul>
         </nav>
+        <!--For mobile phone-->
+        <button class="menu-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+
     </header>
 
 <main>
@@ -71,5 +76,16 @@
     </p>
   </section>
 </main>
+
+<!--JS code for Menu togle in mobile phone-->
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('header nav ul');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
