@@ -1,16 +1,21 @@
+/*Reset default style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Root variables*/
 :root {
     --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
     --accent-color: #8b5cf6;
     --text-color: #f8fafc;
     --bg-color: #0f172a;
     --section-bg: rgba(255, 255, 255, 0.03);
     --transition: 0.3s ease-in-out;
-}
+    --focus-shadow: #4facfe;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -55,13 +60,55 @@ body {
 }
 
 .main-title {
-    font-size: 2.8rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 2px;
+  padding-bottom: 16px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover), var(--accent-color));
+  background-clip: text; /*Specify how far the background should extend within an element:*/
+  color: transparent;
+  position: relative;
+  animation: glowPulse 1.5s infinite alternate ease-in-out; /*Glow pulse animation*/
+
 }
+
+.main-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.main-title::after {
+  content: "";
+  position: absolute;
+  background: var(--text-color);
+  width: 12px;
+  height: 12px;
+  bottom: -6px;
+  left: 50%;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  transform: translateX(-50%);
+}
+
+/* Animation */
+@keyframes glowPulse {
+  from {
+    filter: brightness(0.9);
+    text-shadow: 0 0 8px var(--focus-shadow);
+  }
+  to {
+    filter: brightness(2.0);
+    text-shadow: 0 0 18px var(--accent-color);
+  }
+}
+
 
 .subtitle {
     font-size: 1.6rem;

@@ -53,8 +53,7 @@ header img {
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
 }
 
-header img:hover,
-header img:focus-visible {
+header img:hover{
     transform: scale(1.15) rotate(-2deg);
     filter: hue-rotate(15deg) brightness(1.1);
     box-shadow: 0 4px 16px var(--focus-shadow);
@@ -62,6 +61,7 @@ header img:focus-visible {
     cursor: pointer;
 }
 
+/*Search Box Style*/
 .search-box {
     border-radius: 999px;
     height: 38px;
@@ -85,7 +85,7 @@ header img:focus-visible {
     font-size: 0.98rem;
 }
 
-.search-box:focus-visible {
+.search-box:focus{
     border-color: var(--primary-hover);
     background: #1e293b;
     box-shadow: 0 0 0 3px var(--focus-shadow);
@@ -114,9 +114,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover,
-header nav ul li a:focus-visible {
+header nav ul li a:focus{
     color: white;
-    background-color: var(--accent-color);
     outline: none;
     background: linear-gradient(135deg, #6a82fb, #4a00e0);
     transform: translateY(-3px);
@@ -151,16 +150,17 @@ header nav ul li a:focus-visible {
   letter-spacing: 2px;
   margin-bottom: 20px;
   background: linear-gradient(90deg, var(--primary-color), var(--primary-hover), var(--accent-color));
-  background-clip: text;
+  background-clip: text; /*Specify how far the background should extend within an element*/
   color: transparent;
   text-shadow:
     0 4px 24px var(--focus-shadow),
     0 2px 8px rgba(0, 0, 0, 0.28),
     0 1px 0 rgba(255, 255, 255, 0.08);
-  animation: glowPulse 1.5s infinite alternate ease-in-out;
+  animation: glowPulse 1.5s infinite alternate ease-in-out; /*Glow Pulse Animation*/
 }
-
+/*The Glow Pulse Animation*/
 @keyframes glowPulse {
+/*from this style*/
   from {
     filter: brightness(0.5);
     text-shadow:
@@ -168,6 +168,7 @@ header nav ul li a:focus-visible {
       0 2px 8px rgba(0, 0, 0, 0.28),
       0 1px 0 rgba(255, 255, 255, 0.08);
   }
+  /*to this style*/
   to {
     filter: brightness(1.5);
     text-shadow:

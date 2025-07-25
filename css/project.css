@@ -1,3 +1,11 @@
+
+/*Reset the default style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Variables and base reset */
 :root {
   --primary-color: #3b82f6;
@@ -10,12 +18,6 @@
   --card-bg: rgba(255, 255, 255, 0.03);
   --card-border: rgba(255, 255, 255, 0.08);
   --focus-shadow: rgba(59, 130, 246, 0.3);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -35,10 +37,9 @@ body {
   padding-bottom: 16px;
   background: linear-gradient(90deg, var(--primary-color), var(--primary-hover), var(--accent-color));
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   position: relative;
-  animation: glowPulse 1.5s infinite alternate ease-in-out;
+  animation: glowPulse 1.5s infinite alternate ease-in-out; /*Same animation*/
 }
 
 .section-title::before {
@@ -107,7 +108,6 @@ body {
   outline: none;
 }
 
-/* Grid Layout */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
