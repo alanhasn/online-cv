@@ -152,6 +152,7 @@ header nav ul li a:focus{
   background: linear-gradient(90deg, var(--primary-color), var(--primary-hover), var(--accent-color));
   background-clip: text; /*Specify how far the background should extend within an element*/
   color: transparent;
+  transform: translateY(0);
   text-shadow:
     0 4px 24px var(--focus-shadow),
     0 2px 8px rgba(0, 0, 0, 0.28),
@@ -167,6 +168,7 @@ header nav ul li a:focus{
       0 4px 24px var(--focus-shadow),
       0 2px 8px rgba(0, 0, 0, 0.28),
       0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(0);
   }
   /*to this style*/
   to {
@@ -175,6 +177,7 @@ header nav ul li a:focus{
       0 4px 35px var(--focus-shadow),
       0 2px 14px rgba(0, 0, 0, 0.35),
       0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
   }
 }
 
