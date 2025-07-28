@@ -490,6 +490,18 @@ header nav ul li a:focus{
   min-width: 250px;
 }
 
+.footer-about a{
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-about a:hover{
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
 /* Section Headings */
 #footer h4 {
   font-size: 1.3rem;
