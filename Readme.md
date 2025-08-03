@@ -9,6 +9,12 @@ This is a practical frontend development exercise focused on building a clean, r
 ### About section
 ![about me](./assets/images/preview/about.png)
 
+### Tech Stack Section
+![Tech Stack](./assets/images/preview/tech.png)
+
+### Projects Section
+![Projects Section](./assets/images/preview/projects-main.png)
+
 ### Contact Page
 ![Contact](./assets/images/preview/contact.png)
 
